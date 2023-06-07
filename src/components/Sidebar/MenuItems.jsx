@@ -1,4 +1,5 @@
 import { FaTh, FaCommentAlt, FaChartPie } from "react-icons/fa";
+import { GoAlert } from "react-icons/go";
 
 export const MenuItems = [
   {
@@ -15,5 +16,10 @@ export const MenuItems = [
     path: "/budgeting",
     name: "Budgeting",
     icon: <FaChartPie />,
+  },
+  {
+    path: "/disclaimer",
+    name: "Disclaimer",
+    icon: <GoAlert />,
   },
 ];

@@ -43,6 +43,7 @@ function SearchBar() {
     localStorage.setItem("stock", symbol);
     setResults([]);
     setStockName("");
+    window.location.reload();
   };
 
   return (

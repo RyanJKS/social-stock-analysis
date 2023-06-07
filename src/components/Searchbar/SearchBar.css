@@ -50,6 +50,7 @@ li {
   text-decoration: none;
   list-style: none;
   font: sans-serif;
+  cursor: pointer;
 }
 
 li:hover {
