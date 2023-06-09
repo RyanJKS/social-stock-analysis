@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function StackedBarChart() {
-  const { recommendationTrends } = useContext(StockContext);
+  const { recommendationTrends, isLoading } = useContext(StockContext);
 
   const labels = FormatDataArray(recommendationTrends);
   const { strongSell, sell, hold, buy, strongBuy } =
@@ -90,16 +90,21 @@ function StackedBarChart() {
     },
   };
 
-  return (
-    <div className="chart-container">
-      {recommendationTrends.length > 0 ? (
-        <Bar options={options} data={data} />
-      ) : (
+  const CheckData = ({ data }) => {
+    if (!isLoading && recommendationTrends.length > 0) {
+      return <Bar options={options} data={data} />;
+    } else if (!isLoading) {
+      return (
         <h1 style={{ textAlign: "center", paddingTop: "15%" }}>
           Sorry, no sentiment could be collected at this moment, please try
           again later
         </h1>
-      )}
+      );
+    }
+  };
+  return (
+    <div className="chart-container">
+      <CheckData data={data} />
     </div>
   );
 }

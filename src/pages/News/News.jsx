@@ -1,12 +1,14 @@
 import React, { useContext, useState, useEffect } from "react";
 import { StockContext } from "../../context/StockContext";
 import { axiosInstance } from "../../config/apiConfig";
+import { useLocation } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import LoadingAnimation from "../../components/LoadingAnimation/LoadingAnimation";
 
 function News() {
   const { stockSymbol, isLoading, setIsLoading } = useContext(StockContext);
+  const location = useLocation();
   const [finhubNews, setFinhubNews] = useState([]);
 
   useEffect(() => {
@@ -25,12 +27,14 @@ function News() {
       }
     };
 
-    getNews();
+    if (location.pathname === "/news") {
+      getNews();
+    }
 
     return () => {
       isMounted = false;
     };
-  }, [stockSymbol]);
+  }, [stockSymbol, location.pathname]);
 
   return (
     <Grid container spacing={3}>

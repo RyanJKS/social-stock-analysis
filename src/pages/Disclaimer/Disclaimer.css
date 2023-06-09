@@ -1,0 +1,22 @@
+.disclaimer-container{
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem;
+  align-items: center;
+  gap:2rem;
+}
+
+.disclaimer-title{
+  font-size: 50px;
+}
+
+.disclaimer-body{
+  width: 80%;
+  line-height: 1.5;
+}
+.disclaimer-footer{
+  text-align: center;
+  width: 80%;
+}

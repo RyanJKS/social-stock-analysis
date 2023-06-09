@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import { axiosInstance } from "../config/apiConfig";
+import { useLocation } from "react-router-dom";
 
 export const StockContext = createContext();
 
@@ -8,6 +9,8 @@ export const StockContextProvider = (props) => {
   const [stockSymbol, setStockSymbol] = useState(
     localStorage.getItem("stock") || "TSLA"
   );
+
+  const location = useLocation();
 
   const [isLoading, setIsLoading] = useState(false); //to use for loading animations
   const [alphaNewsSentiment, setAlphaNewsSentiment] = useState([]);
@@ -64,13 +67,15 @@ export const StockContextProvider = (props) => {
       }
     };
 
-    fetchSentiment();
+    if (location.pathname === "/") {
+      fetchSentiment();
+    }
 
     return () => {
       // Cleanup function to cancel the requests
       cancelToken.cancel("Request cancelled due to component unmount");
     };
-  }, [stockSymbol]);
+  }, [stockSymbol, location.pathname]);
 
   return (
     <StockContext.Provider
