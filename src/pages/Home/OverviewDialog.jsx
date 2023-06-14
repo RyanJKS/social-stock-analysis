@@ -33,11 +33,26 @@ function OverviewDialog() {
                 lineHeight: 2,
               }}
             >
-              An interview-centric course designed to prepare you for the role
-              of SDE for both product and service-based companies. A placement
-              preparation pack built with years of expertise. Learn Resume
-              Building, C++, Java, DSA, CS Theory concepts, Aptitude, Reasoning,
-              LLD, and much more!
+              Welcome to StockSense!
+              <br />
+              Start with searching for a stock by putting their name in the
+              search field. Then wait for the API to get a response back to view
+              the market sentiment. You can also headover to the news section in
+              order to make your own jusdgement about the analysis given. To
+              learn more about the api, click{" "}
+              <a
+                href="https://www.alphavantage.co/documentation/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                here
+              </a>
+              .
+              <br />
+              To view more of my projects, click{" "}
+              <a href="https://jhelan.dev/" target="_blank" rel="noreferrer">
+                here
+              </a>
             </Container>
           </CardContent>
         </Collapse>
