@@ -12,6 +12,10 @@
 <br />
 <div align="center">
 
+<div align="center">
+  <img src="/README/signature.PNG" alt="LOGO">
+</div>
+
 <h3 align="center">Social Stock Analysis (Stock Sense)</h3>
 
   <p align="center">
