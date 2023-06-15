@@ -47,6 +47,7 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
         <li><a href="#extra-packages">Extra Packages</a></li>
+        <li><a href="#functionalities">Functionalities</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -94,10 +95,20 @@ StockSense is a cutting-edge, fully responsive React application that will capti
 - REST API (Finhub and Alpha Vantage) - Click <a href="https://finnhub.io/docs/api/introduction"
                 target="_blank"
                 rel="noreferrer"> here</a> for Finhub Documentation and <a href="https://www.alphavantage.co/documentation/" target="_blank" rel="noreferrer"> here </a> for Alpha Vantage Documentation
-- React Icons
+- ExpressJS
+- Axios
+- Cors
 - Material UI Icons
 - React ChartJs 2
 - Vercel (Deployment)
+
+### Functionalities
+
+- Users can view multiple sentiment charts representing the sentiment of a stock based on social media platforms like Twitter and Reddit, as well as news articles.
+- Users can access a personalized dashboard displaying a pie chart that summarizes the sentiment analysis, categorizing it as a strong buy or strong sell.
+- Users will find news articles related to the selected stock, allowing them to validate the sentiment data and make informed judgments.
+- Users can explore a stacked bar chart presenting expert opinions on the stock, categorized as sell, hold, or buy, giving further insights into market sentiment.
+- Users can search for specific stocks to access real-time data, visualizations, and insights.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
